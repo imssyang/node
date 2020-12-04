@@ -1,0 +1,2 @@
+# node
+/opt/node
