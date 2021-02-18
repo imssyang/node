@@ -19,6 +19,11 @@ export NODE_DISABLE_ENV=yes
 #export SSL_CERT_DIR=
 #export SSL_CERT_FILE=
 #export UV_THREADPOOL_SIZE=10
-
 #eval "optbin -s /opt/node/bin"
+
+# NVM
+export NVM_DIR=/opt/node/nvm
+if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+  source "$NVM_DIR/nvm.sh"
+fi
 
