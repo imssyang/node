@@ -3,6 +3,9 @@ archive
 bin
 include
 lib
-nvm
+nvm/*
+!nvm/README.md
+!nvm/nvm-exec
+!nvm/nvm.sh
 share
 **/*/Learning-Node
