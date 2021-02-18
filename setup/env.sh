@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export NODE_DISABLE_ENV=yes
-export NODE_DEBUG=fs,http
+#export NODE_DEBUG=fs,http
 #export NODE_DEBUG_NATIVE=
 #export NODE_DISABLE_COLORS=1
 #export NODE_EXTRA_CA_CERTS=
@@ -20,5 +20,5 @@ export NODE_DEBUG=fs,http
 #export SSL_CERT_FILE=
 #export UV_THREADPOOL_SIZE=10
 
-eval "optbin -s /opt/node/bin"
+#eval "optbin -s /opt/node/bin"
 
