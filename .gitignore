@@ -7,5 +7,6 @@ nvm/*
 !nvm/README.md
 !nvm/nvm-exec
 !nvm/nvm.sh
+sample/module/**/*/node_modules
 share
 **/*/Learning-Node
