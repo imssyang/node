@@ -8,5 +8,6 @@ nvm/*
 !nvm/nvm-exec
 !nvm/nvm.sh
 sample/module/**/*/node_modules
+!sample/module/inputcheck
 share
 **/*/Learning-Node
