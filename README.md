@@ -7,6 +7,8 @@ env NODE_NO_READLINE=1 rlwrap -ppurple -S "::>" node 使用rlwrap将提示符设
 ln -s /opt/node/bin/node /usr/local/bin/node
 ln -s /opt/node/bin/npm /usr/local/bin/npm
 ln -s /opt/node/bin/npx /usr/local/bin/npx
+npm install express-generator -g                     安装Express应用生成器
+ln -s /opt/node/bin/express /usr/local/bin/express
 ```
 
 ### AsyncMode
