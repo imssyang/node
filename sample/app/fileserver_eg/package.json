@@ -1,6 +1,6 @@
 {
   "name": "fileserver_eg",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Simple file-server as example.",
   "main": "main.js",
   "dependencies": {
@@ -15,5 +15,9 @@
     "server"
   ],
   "author": "imssyang <imssyang@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imssyang/node/blob/master/sample/app/fileserver_eg"
+  }
 }
