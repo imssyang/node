@@ -2,10 +2,10 @@ var http = require('http'),
     url =  require('url'),
     fs   = require('fs'),
     mime = require('mime');
-    base = 'html';
+    base = '/html';
 
 http.createServer(function (req, res) {
-    pathname = base + req.url;
+    pathname = __dirname + base + req.url;
     console.log('path: ' + pathname);
 
     fs.stat(pathname, function(err, stats) {

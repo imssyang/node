@@ -1,6 +1,6 @@
 {
   "name": "fileserver_eg",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple file-server as example.",
   "main": "main.js",
   "dependencies": {
