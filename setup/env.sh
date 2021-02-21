@@ -30,5 +30,6 @@ fi
 
 # Express
 export PORT=3030
+#export NODE_ENV=development
 
 
