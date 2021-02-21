@@ -9,6 +9,8 @@ ln -s /opt/node/bin/npm /usr/local/bin/npm
 ln -s /opt/node/bin/npx /usr/local/bin/npx
 npm install express-generator -g                     安装Express应用生成器
 ln -s /opt/node/bin/express /usr/local/bin/express
+npm install nodemon -g                               自动化工具（文件改动时重启服务器）
+ln -s /opt/node/bin/nodemon /usr/local/bin/nodemon
 ```
 
 ### AsyncMode
