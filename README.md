@@ -11,6 +11,8 @@ npm install express-generator -g                     安装Express应用生成�
 ln -s /opt/node/bin/express /usr/local/bin/express
 npm install nodemon -g                               自动化工具（文件改动时重启服务器）
 ln -s /opt/node/bin/nodemon /usr/local/bin/nodemon
+npm install hexo-cli -g                              Blog构建工具
+ln -s /opt/node/bin/hexo /usr/local/bin/hexo
 ```
 
 ### AsyncMode
