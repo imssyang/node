@@ -39,5 +39,6 @@ hexo server --ip 192.168.5.220
 
 [hexo](https://hexo.io/)
 [theme-next](https://theme-next.js.org/)
+[Favicon Generator](https://realfavicongenerator.net/)
 
 
