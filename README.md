@@ -7,6 +7,8 @@ env NODE_NO_READLINE=1 rlwrap -ppurple -S "::>" node 使用rlwrap将提示符设
 ln -s /opt/node/bin/node /usr/local/bin/node
 ln -s /opt/node/bin/npm /usr/local/bin/npm
 ln -s /opt/node/bin/npx /usr/local/bin/npx
+
+npm config set registry https://registry.npm.taobao.org 更换国内源仓库
 npm install express-generator -g                     安装Express应用生成器
 ln -s /opt/node/bin/express /usr/local/bin/express
 npm install nodemon -g                               自动化工具（文件改动时重启服务器）
