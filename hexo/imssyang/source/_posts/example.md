@@ -1,9 +1,13 @@
 ---
 title: example
-tags: [test, example]
+tags:
+  - program
+  - diary
+  - web
 sitemap: false
 ---
-This is example.
+
+Welcome to [Just Do It](https://imssyang.com)! This is a sample article. Let's add some tags as above.
 <!-- more -->
 
 ### pdf
