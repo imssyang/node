@@ -1,6 +1,7 @@
 ---
 title: example
 tags: [test, example]
+sitemap: false
 ---
 
 ### pdf
