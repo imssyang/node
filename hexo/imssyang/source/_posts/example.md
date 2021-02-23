@@ -3,6 +3,8 @@ title: example
 tags: [test, example]
 sitemap: false
 ---
+This is example.
+<!-- more -->
 
 ### pdf
 
