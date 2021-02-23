@@ -1,9 +1,9 @@
 ---
-permalink: /404.html
 title: 404
 description: 404 – Page not found.
 comments: false
 sitemap: false
+date: 2021-02-23 09:25:00
 ---
 
 ```
@@ -21,3 +21,9 @@ sitemap: false
       ██║     ╚██████╔╝╚██████╔╝██║ ╚████║██████╔╝
       ╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝
 ```
+<!--
+<script src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js"
+        charset="utf-8" homePageUrl="/" homePageName="Back to home">
+</script>
+-->
+

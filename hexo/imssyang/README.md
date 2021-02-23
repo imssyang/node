@@ -36,6 +36,11 @@ hexo --debug  调试模式
 hexo server --ip 192.168.5.220
 ```
 
+### 404-page
+
+```
+hexo new page 404   创建source/404/index.md
+```
 
 [hexo](https://hexo.io/)
 [theme-next](https://theme-next.js.org/)
