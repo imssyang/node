@@ -1,0 +1,11 @@
+User-agent: Baiduspider
+Disallow: /test
+
+User-agent: Baiduspider-image
+Disallow: /test?
+
+User-agent: Googlebot
+Disallow: /test?
+
+User-agent: *
+Disallow: /
