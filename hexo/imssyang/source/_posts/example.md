@@ -1,5 +1,6 @@
 ---
 title: example
+tags: [test, example]
 ---
 
 ### pdf
