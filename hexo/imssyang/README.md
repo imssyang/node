@@ -46,6 +46,7 @@ hexo server --ip 192.168.5.220
 hexo new page 404   创建source/404/index.md
 hexo new page tags
 hexo new page categories 
+hexo new page about
 ```
 
 [hexo](https://hexo.io/)
