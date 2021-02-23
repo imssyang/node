@@ -268,7 +268,7 @@ reward_settings:
 
 reward:
   #wechatpay: /uploads/reward/wechatpay.png
-  alipay: /uploads/reward/alipay.png
+  alipay: /uploads/reward/alipay.jpg
   #paypal: /uploads/reward/paypal.png
   #bitcoin: /uploads/reward/bitcoin.png
 
@@ -297,8 +297,8 @@ related_posts:
 # Easily browse and edit blog source code online.
 post_edit:
   enable: false
-  url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name/ # Link for view source
-  #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/ # Link for fork & edit
+  url: https://github.com/imssyang/imssyang/tree/master/source/_posts/ # Link for view source
+  #url: https://github.com/imssyang/imssyang/edit/master/source/_posts/ # Link for fork & edit
 
 # Show previous post and next post in post footer if exists
 # Available values: left | right | false
