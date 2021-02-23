@@ -5,10 +5,13 @@
 # Site
 title: Just Do It
 subtitle: 'imssyang'
-description: 'doing'
+description: ''
 keywords: imssyang
 author: I'm Ssyang
-language: en
+language:
+  - en
+  - zh-CN
+  - zh-TW
 timezone: 'Asia/Shanghai'
 
 # URL

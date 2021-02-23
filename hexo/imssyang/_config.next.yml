@@ -21,14 +21,14 @@ minify: true
 custom_file_path:
   #head: source/_data/head.njk
   #header: source/_data/header.njk
-  #sidebar: source/_data/sidebar.njk
+  sidebar: source/_data/sidebar.njk
   #postMeta: source/_data/post-meta.njk
   #postBodyEnd: source/_data/post-body-end.njk
   #footer: source/_data/footer.njk
   #bodyEnd: source/_data/body-end.njk
-  #variable: source/_data/variables.styl
+  variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
-  #style: source/_data/styles.styl
+  style: source/_data/styles.styl
 
 
 # ---------------------------------------------------------------
@@ -195,7 +195,7 @@ chat:
 # ---------------------------------------------------------------
 
 # Show multilingual switcher in footer.
-language_switcher: false
+language_switcher: true
 
 footer:
   # Specify the year when the site was setup. If not defined, current year will be used.
@@ -425,13 +425,13 @@ font:
   # Global font settings used for all elements inside <body>.
   global:
     external: true
-    family: Times New Roman
-    size: 
+    family: Noto Serif SC
+    size:
 
   # Font settings for site title (.site-title).
   title:
     external: true
-    family: 
+    family:
     size:
 
   # Font settings for headlines (<h1> to <h6>).
@@ -448,7 +448,7 @@ font:
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family:
+    family: Courier New
 
 
 # ---------------------------------------------------------------
@@ -458,7 +458,7 @@ font:
 
 # If true, site-subtitle will be added to index page.
 # Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
-index_with_subtitle: false
+index_with_subtitle: true
 
 # Automatically add external URL with Base64 encrypt & decrypt.
 exturl: false
