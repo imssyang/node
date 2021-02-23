@@ -87,7 +87,7 @@ menu:
   archives: /archives/ || fa fa-archive
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
-  commonweal: /404/ || fa fa-heartbeat
+  #commonweal: /404/ || fa fa-heartbeat
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -108,14 +108,14 @@ sidebar:
   # Manual define the sidebar width. If commented, will be default for:
   # Muse | Mist: 320
   # Pisces | Gemini: 240
-  #width: 300
+  width: 300
 
   # Sidebar Display (only for Muse | Mist), available values:
   #  - post    expand on posts automatically. Default.
   #  - always  expand for all pages automatically.
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  totally remove sidebar including sidebar toggle.
-  display: post
+  display: hide
 
   # Sidebar padding in pixels.
   padding: 18
@@ -125,11 +125,12 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: #/images/avatar.gif
+  #url: /images/avatar.gif
+  url: /uploads/windmill.png
   # If true, the avatar will be dispalyed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar will be rotated with the cursor.
-  rotated: false
+  rotated: true
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
@@ -153,7 +154,7 @@ social:
 social_icons:
   enable: true
   icons_only: false
-  transition: false
+  transition: true
 
 # Blog rolls
 links_settings:
@@ -163,7 +164,7 @@ links_settings:
   layout: block
 
 links:
-  Title: https://imssyang.com
+  imssyang: https://imssyang.com
 
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
@@ -198,19 +199,19 @@ language_switcher: false
 
 footer:
   # Specify the year when the site was setup. If not defined, current year will be used.
-  #since: 2020
+  since: 2020
 
   # Icon between year and copyright info.
   icon:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
-    name: fa fa-heart
+    name: fa fa-user
     # If you want to animate the icon, set it to true.
-    animated: false
+    animated: true
     # Change the color of icon, using Hex Code.
-    color: "#ff0000"
+    color: "#a3a3a3"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
-  copyright:
+  copyright: imssyang
 
   # Powered by Hexo & NexT
   powered: true
