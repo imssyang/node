@@ -10,6 +10,14 @@ sitemap: false
 Welcome to [Just Do It](https://imssyang.com)! This is a sample article. Let's add some tags as above.
 <!-- more -->
 
+## Tag Plugins
+
+### Button
+
+{% button #, Text %}
+{% btn #, Text %}{% btn #, Text & Title,, Title %}
+
+
 ### pdf
 
 {% pdf http://192.168.5.220/rfc5389.pdf %}
