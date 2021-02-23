@@ -15,6 +15,8 @@ hexo --version
 ```
 vim package.json
   "dependencies": {
+    "hexo-generator-sitemap": "^2.0.0",
+    "hexo-word-counter": "^0.0.3",
     "hexo-theme-next": "^8.2.0"
   }
 npm install
