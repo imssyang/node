@@ -32,6 +32,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - README.md
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -133,4 +134,16 @@ search:
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/imssyang/blog.git
+  branch: master
+  token: ''
+  message: Site updated
+  name: imssyang
+  email: imssyang@gmail.com
+  extend_dirs: ''
+  ignore_hidden: true
+  ignore_pattern:
+    ignore_pattern:
+        public: .
+
