@@ -49,6 +49,12 @@ hexo new page categories
 hexo new page about
 ```
 
+### Generator
+
+```
+hexo g  查看生成结果
+```
+
 [hexo](https://hexo.io/)
 [theme-next](https://theme-next.js.org/)
 [Favicon Generator](https://realfavicongenerator.net/)
