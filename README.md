@@ -15,6 +15,15 @@ npm install nodemon -g                               自动化工具（文件改
 ln -s /opt/node/bin/nodemon /usr/local/bin/nodemon
 npm install hexo-cli -g                              Blog构建工具
 ln -s /opt/node/bin/hexo /usr/local/bin/hexo
+npm install yarn -g
+ln -s /opt/node/bin/yarn /usr/local/bin/yarn
+yarn config list --verbose
+yarn config set prefix "/opt/node/yarn"
+yarn config set cache-folder "/opt/node/yarn/cache"
+yarn config set registry https://registry.npm.taobao.org
+yarn config set registry https://registry.yarnpkg.com
+yarn global bin 查看全局bin目录
+yarn cache clean
 ```
 
 ### AsyncMode
