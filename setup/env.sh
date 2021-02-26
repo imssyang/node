@@ -32,4 +32,12 @@ fi
 export PORT=3030
 #export NODE_ENV=development
 
+# Wrangler
+export RUST_BACKTRACE=1
+export CF_ACCOUNT_ID=d4608fdf5e1cb8de62bea1f0b45ea7b2 # imssyang.com
+export CF_API_TOKEN=1otaknMdHW_oiLoOYNQdFpGZrVUZrXakIS89KwEB
+export CF_EMAIL=imssyang@gmail.com
+export CF_API_KEY=e766a4c5557371b7a3156eeabdaf9888d670e
+export CF_ZONE_ID=17646f713d4cf6103e393b6bc53402f5
+
 

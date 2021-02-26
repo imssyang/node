@@ -13,6 +13,5 @@ sample/**/*/package-lock.json
 sample/**/*/node_modules
 !sample/module/inputcheck/node_modules
 share
-wrangler/
 yarn/cache/
 **/*/Learning-Node
