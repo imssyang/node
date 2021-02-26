@@ -1,4 +1,6 @@
 # Prerequisites
+.npm
+.npmrc
 archive
 bin
 include
