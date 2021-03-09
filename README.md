@@ -35,6 +35,15 @@ wrangler --help --allow-root
 wrangler config    配置cloudflare API token
 ```
 
+### JsSIP-tryit
+
+```
+npm install -g gulp-cli  构建app(gulpfile file)
+gulp prod  构建app(production/minified mode)
+gulp dev   构建app(development mode)
+gulp live  构建app(development mode调试运行）
+```
+
 ### AsyncMode
 
 - waterfall `所有函数按照顺序被依次调用执行，所有的处理结果以数组形式传递给最后一个回调函数（也叫series或者sequence）。`
