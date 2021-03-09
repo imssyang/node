@@ -1,0 +1,9 @@
+{
+  "name": "ECMAScript6",
+  "version": "1.0.0",
+  "dependencies": {
+    "co": "^4.6.0",
+    "node-fetch": "^2.6.1",
+    "thunkify": "^2.1.2"
+  }
+}
