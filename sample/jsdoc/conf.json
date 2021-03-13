@@ -1,0 +1,40 @@
+
+{
+    "sourceType": "module",
+    "source": {
+        "include": [],
+        "exclude": ["myProject/lib/ignore.js"],
+        "includePattern": ".+\\.js(doc|x)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "opts": {
+        "template": "templates/default",
+        "encoding": "utf8",
+        "destination": "./out/",
+        "recurse": true,
+        "tutorials": ""
+    },
+    "plugins": [
+        "plugins/markdown",
+        "plugins/shout"
+    ],
+    "markdown": {
+        "excludeTags": ["author"]
+    },
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc","closure"]
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false,
+        "default": {
+            "staticFiles": {
+                "include": [
+                    "."
+                ]
+            }
+        }
+    }
+}
+
