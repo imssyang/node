@@ -18,6 +18,7 @@ ln -s /opt/node/bin/hexo /usr/local/bin/hexo
 npm install yarn -g                                  包管理工具
 ln -s /opt/node/bin/yarn /usr/local/bin/yarn
 npm install jsdoc -g                                 源码生成文档
+npm install docsify-cli -g                           单文档
 yarn config list --verbose
 yarn config set prefix "/opt/node/yarn"
 yarn config set cache-folder "/opt/node/yarn/cache"
