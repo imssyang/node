@@ -11,6 +11,7 @@ nvm/*
 !nvm/nvm.sh
 sample/**/*/package-lock.json
 sample/**/*/node_modules
+sample/**/*/out
 !sample/module/inputcheck/node_modules
 share
 yarn/cache/
