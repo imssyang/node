@@ -5,6 +5,7 @@ async function* gen() {
 const genObj = gen();
 genObj.next().then(x => console.log(x)); // { value: 'hello', done: false }
 
+
 // 异步遍历器使得Generator函数处理同步操作和异步操作时能够使用同一套接口。
 function* map(iterable, func) {  // 同步Generator函数
     const iter = iterable[Symbol.iterator]();
