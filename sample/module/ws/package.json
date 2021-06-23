@@ -1,0 +1,9 @@
+{
+  "name": "ws-server",
+  "version": "1.0.0",
+  "description": "WebSocket Test.",
+  "main": "main.js",
+  "dependencies": {
+    "ws": "^7.5.0"
+  }
+}
