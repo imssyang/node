@@ -2,6 +2,8 @@
 
 APP=node
 HOME=/opt/$APP
+SYSD=/etc/systemd/system
+SERFILE=hexo.service
 
 init() {
   #https_proxy=http://127.0.0.1:8118
@@ -41,10 +43,27 @@ init() {
     echo "($APP) install wrangler"
     npm install @cloudflare/wrangler -g --unsafe-perm=true --allow-root
   fi
+
+  chown -R root:root $HOME
+  chmod 755 $HOME
+
+  if [[ ! -s $SYSD/$SERFILE ]]; then
+    ln -s $HOME/setup/$SERFILE $SYSD/$SERFILE
+    systemctl enable $SERFILE
+    echo "($APP) create symlink: $SYSD/$SERFILE --> $HOME/setup/$SERFILE"
+  fi
 }
 
 deinit() {
-  echo
+  if [[ -s $SYSD/$SERFILE ]]; then
+    systemctl disable $SERFILE
+    rm -rf $SYSD/$SERFILE
+    echo "($APP) delete symlink: $SYSD/$SERFILE"
+  fi
+
+  systemctl daemon-reload
+
+  chown -R root:root $HOME
 }
 
 start() {
