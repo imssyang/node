@@ -53,6 +53,12 @@ asar extract app.asar app 解包
 asar pack app app.asar    打包
 ```
 
+### TypeScript
+
+```
+npm install -g typescript
+```
+
 ### AsyncMode
 
 - waterfall `所有函数按照顺序被依次调用执行，所有的处理结果以数组形式传递给最后一个回调函数（也叫series或者sequence）。`
