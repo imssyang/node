@@ -4,6 +4,6 @@
   "description": "WebSocket Test.",
   "main": "main.js",
   "dependencies": {
-    "ws": "^7.5.0"
+    "ws": "^7.5.3"
   }
 }

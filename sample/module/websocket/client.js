@@ -1,11 +1,11 @@
 const WebSocket = require('ws');
 
-const ws = new WebSocket('ws://www.host.com/path');
+const ws = new WebSocket('ws://localhost:8787');
 
 ws.on('open', function open() {
-  ws.send('something');
+  ws.send('Hi!');
 });
 
 ws.on('message', function incoming(data) {
-  console.log(data);
+  console.log('S: %s', data);
 });
