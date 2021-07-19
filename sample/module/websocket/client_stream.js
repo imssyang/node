@@ -1,8 +1,6 @@
 const WebSocket = require('ws');
 
-const ws = new WebSocket('wss://echo.websocket.org/', {
-  origin: 'https://websocket.org'
-});
+const ws = new WebSocket('ws://www.imssyang.com:8787');
 
 const duplex = WebSocket.createWebSocketStream(ws, { encoding: 'utf8' });
 

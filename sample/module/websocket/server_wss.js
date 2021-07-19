@@ -9,11 +9,11 @@ const server = https.createServer({
 const wss = new WebSocket.Server({ server });
 
 wss.on('connection', function connection(ws) {
-  wss.on('message', function incoming(message) {
+  ws.on('message', function incoming(message) {
     console.log('C: %s', message);
   });
 
-  wss.send('Hi!');
+  ws.send('Hi!');
 });
 
 server.listen(8787);

@@ -7,11 +7,19 @@ const wss1 = new WebSocket.Server({ noServer: true });
 const wss2 = new WebSocket.Server({ noServer: true });
 
 wss1.on('connection', function connection(ws) {
-  // ...
+  ws.on('message', function incoming(message) {
+    console.log('FOO: %s', message);
+  });
+
+  ws.send('Hi, Foo!');
 });
 
 wss2.on('connection', function connection(ws) {
-  // ...
+  ws.on('message', function incoming(message) {
+    console.log('BAR: %s', message);
+  });
+
+  ws.send('Hi, Bar!');
 });
 
 server.on('upgrade', function upgrade(request, socket, head) {
@@ -30,4 +38,4 @@ server.on('upgrade', function upgrade(request, socket, head) {
   }
 });
 
-server.listen(8080);
+server.listen(8787);

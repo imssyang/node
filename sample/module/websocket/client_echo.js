@@ -1,7 +1,7 @@
 //echo.websocket.org demo
 const WebSocket = require('ws');
 
-const ws = new WebSocket('wss://echo.websocket.org/', {
+const ws = new WebSocket('ws://www.imssyang.com:8787', {
   origin: 'https://websocket.org'
 });
 

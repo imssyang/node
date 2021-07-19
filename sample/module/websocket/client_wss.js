@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
 
-const ws = new WebSocket('ws://www.imssyang.com:8787');
+const ws = new WebSocket('wss://www.imssyang.com:8787', { rejectUnauthorized: false });
 
 ws.on('open', function open() {
   ws.send('Hi!');

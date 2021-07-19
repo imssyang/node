@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
 
-const ws = new WebSocket('ws://www.host.com/path');
+const ws = new WebSocket('ws://www.imssyang.com:8787');
 
 ws.on('open', function open() {
   const array = new Float32Array(5);
