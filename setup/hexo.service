@@ -5,7 +5,8 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/opt/node/bin/hexo server --cwd /root/.blog --ip 0.0.0.0 --port 5151
+#ExecStart=/opt/node/bin/hexo server --cwd /root/.blog --ip 0.0.0.0 --port 5151
+ExecStart=/opt/node/bin/node /root/.blog/bin/hexo server --cwd /root/.blog/web --ip 0.0.0.0 --port 5151
 
 [Install]
 WantedBy=multi-user.target
