@@ -2,68 +2,104 @@
 
 APP=node
 HOME=/opt/$APP
+VERSION=v12.18.3
 SYSD=/etc/systemd/system
-SERFILE=hexo.service
+
+_create_symlink() {
+  src=$1
+  dst=$2
+  if [[ ! -d $dst ]] && [[ ! -s $dst ]]; then
+    ln -s $src $dst
+    echo "($APP) create symlink: $src -> $dst"
+  fi
+}
+
+_delete_symlink() {
+  dst=$1
+  if [[ -d $dst ]] || [[ -s $dst ]]; then
+    rm -rf $dst
+    echo "($APP) delete symlink: $dst"
+  fi
+}
+
+_install_package() {
+  program_name=$1
+  package_name=$2
+  if [[ ! -s $HOME/bin/$program_name ]]; then
+    npm install $package_name -g
+    echo "($APP) install package: $package_name"
+  fi
+}
+
+_uninstall_package() {
+  program_name=$1
+  package_name=$2
+  if [[ -s $HOME/bin/$program_name ]]; then
+    npm uninstall $package_name -g
+    echo "($APP) uninstall package: $package_name"
+  fi
+}
+
+_enable_service() {
+  name=$1
+  _create_symlink $HOME/setup/$name $SYSD/$name
+  systemctl enable $name
+  systemctl daemon-reload
+}
+
+_disable_service() {
+  name=$1
+  systemctl disable $name
+  systemctl daemon-reload
+  _delete_symlink $SYSD/$name
+}
 
 init() {
   #https_proxy=http://127.0.0.1:8118
   #npm config set registry https://registry.npm.taobao.org
   #npm config set registry https://registry.npmjs.org
 
-  if [[ ! -s /usr/local/bin/node ]]; then
-    echo "($APP) create symlink: /usr/local/bin/node --> /opt/node/bin/node"
-    ln -s /opt/node/bin/node /usr/local/bin/node
-  fi
+  _create_symlink $HOME/nvm/versions/node/$VERSION/bin     $HOME/bin
+  _create_symlink $HOME/nvm/versions/node/$VERSION/include $HOME/include
+  _create_symlink $HOME/nvm/versions/node/$VERSION/lib     $HOME/lib
+  _create_symlink $HOME/nvm/versions/node/$VERSION/share   $HOME/share
 
-  if [[ ! -s $HOME/bin/express ]]; then
-    echo "($APP) install express-generator"
-    npm install express-generator -g
-  fi
+  #_install_package express   express-generator
+  #_install_package jsdoc     jsdoc
+  #_install_package nodemon   nodemon
+  _install_package docsify   docsify-cli
+  _install_package gulp      gulp-cli
+  _install_package tsc       typescript
+  _install_package yarn      yarn
+  _install_package wrangler  "@cloudflare/wrangler --unsafe-perm=true --allow-root"
 
-  if [[ ! -s $HOME/bin/nodemon ]]; then
-    echo "($APP) install nodemon"
-    npm install nodemon -g
-  fi
-
-  if [[ ! -s $HOME/bin/hexo ]]; then
-    echo "($APP) install hexo-cli"
-    npm install hexo-cli -g
-  fi
-
-  if [[ ! -s $HOME/bin/yarn ]]; then
-    echo "($APP) install yarn"
-    npm install yarn -g
-	yarn config set prefix "/opt/node/yarn"
-	yarn config set cache-folder "/opt/node/yarn/cache"
-	#yarn config set registry https://registry.npm.taobao.org
-	#yarn config set registry https://registry.yarnpkg.com
-  fi
-
-  if [[ ! -s $HOME/bin/wrangler ]]; then
-    echo "($APP) install wrangler"
-    npm install @cloudflare/wrangler -g --unsafe-perm=true --allow-root
-  fi
+  #yarn config set prefix "/opt/node/yarn"
+  #yarn config set cache-folder "/opt/node/yarn/cache"
+  #yarn config set registry https://registry.npm.taobao.org
+  #yarn config set registry https://registry.yarnpkg.com
 
   chown -R root:root $HOME
   chmod 755 $HOME
 
-  if [[ ! -s $SYSD/$SERFILE ]]; then
-    ln -s $HOME/setup/$SERFILE $SYSD/$SERFILE
-    systemctl enable $SERFILE
-    echo "($APP) create symlink: $SYSD/$SERFILE --> $HOME/setup/$SERFILE"
-  fi
+  _enable_service hexo.service
 }
 
 deinit() {
-  if [[ -s $SYSD/$SERFILE ]]; then
-    systemctl disable $SERFILE
-    rm -rf $SYSD/$SERFILE
-    echo "($APP) delete symlink: $SYSD/$SERFILE"
-  fi
+  #_uninstall_package express   express-generator
+  #_uninstall_package jsdoc     jsdoc
+  #_uninstall_package nodemon   nodemon
+  #_uninstall_package docsify   docsify-cli
+  #_uninstall_package gulp      gulp-cli
+  #_uninstall_package tsc       typescript
+  #_uninstall_package yarn      yarn
+  #_uninstall_package wrangler  "@cloudflare/wrangler --unsafe-perm=true --allow-root"
 
-  systemctl daemon-reload
+  _delete_symlink $HOME/bin
+  _delete_symlink $HOME/include
+  _delete_symlink $HOME/lib
+  _delete_symlink $HOME/share
 
-  chown -R root:root $HOME
+  _disable_service hexo.service
 }
 
 start() {

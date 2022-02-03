@@ -15,11 +15,11 @@ export NODE_DISABLE_ENV=yes
 #export NODE_REPL_HISTORY=
 #export NODE_TLS_REJECT_UNAUTHORIZED=0
 #export NODE_V8_COVERAGE=
-#export OPENSSL_CONF=
-#export SSL_CERT_DIR=
-#export SSL_CERT_FILE=
-#export UV_THREADPOOL_SIZE=10
-#eval "optbin -s /opt/node/bin"
+eval "optbin -s /opt/node/bin"
+
+# NPM
+#export NPM_CONFIG_PREFIX=~/.npm-global
+#export NPM_TOKEN=
 
 # NVM
 export NVM_DIR=/opt/node/nvm
@@ -39,5 +39,4 @@ export CF_API_TOKEN=1otaknMdHW_oiLoOYNQdFpGZrVUZrXakIS89KwEB
 export CF_EMAIL=imssyang@gmail.com
 export CF_API_KEY=e766a4c5557371b7a3156eeabdaf9888d670e
 export CF_ZONE_ID=17646f713d4cf6103e393b6bc53402f5
-
 
