@@ -64,11 +64,12 @@ init() {
   _create_symlink $HOME/nvm/versions/node/$VERSION/lib     $HOME/lib
   _create_symlink $HOME/nvm/versions/node/$VERSION/share   $HOME/share
 
+  _install_package docsify   docsify-cli
   #_install_package express   express-generator
+  _install_package gulp      gulp-cli
+  #_install_package husky     husky
   #_install_package jsdoc     jsdoc
   #_install_package nodemon   nodemon
-  _install_package docsify   docsify-cli
-  _install_package gulp      gulp-cli
   _install_package tsc       typescript
   _install_package yarn      yarn
   _install_package wrangler  "@cloudflare/wrangler --unsafe-perm=true --allow-root"
