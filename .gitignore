@@ -1,6 +1,7 @@
 # Prerequisites
 .npm
 .npmrc
+app/trilium/
 archive
 bin
 include

@@ -40,3 +40,5 @@ export CF_EMAIL=imssyang@gmail.com
 export CF_API_KEY=e766a4c5557371b7a3156eeabdaf9888d670e
 export CF_ZONE_ID=17646f713d4cf6103e393b6bc53402f5
 
+# Trilium
+export TRILIUM_DATA_DIR=/root/.note/trilium
