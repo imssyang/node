@@ -5,6 +5,20 @@ HOME=/opt/$APP
 VERSION=v12.18.3
 SYSD=/etc/systemd/system
 
+_mkdir() {
+  name=$1
+  if [[ ! -d $name ]]; then
+    mkdir -p $name
+  fi
+}
+
+_rmdir() {
+  name=$1
+  if [[ -d $name ]]; then
+    rm -rf $name
+  fi
+}
+
 _create_symlink() {
   src=$1
   dst=$2
@@ -105,6 +119,14 @@ deinit() {
   _disable_service trilium.service
 }
 
+install() {
+  _mkdir $HOME/app
+
+  if [[ ! -d $HOME/app/trilium ]]; then
+    7z x $HOME/archive/source/trilium-linux-x64-server-0.55.1.7z -o$HOME/app
+  fi
+}
+
 start() {
   echo
 }
@@ -120,11 +142,12 @@ show() {
 case "$1" in
   init) init ;;
   deinit) deinit ;;
+  install) install ;;
   start) start ;;
   stop) stop ;;
   show) show ;;
   *) SCRIPTNAME="${0##*/}"
-     echo "Usage: $SCRIPTNAME {init|deinit|start|stop|show}"
+     echo "Usage: $SCRIPTNAME {init|deinit|install|start|stop|show}"
      exit 3
      ;;
 esac
