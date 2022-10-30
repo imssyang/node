@@ -10,7 +10,7 @@ Group=root
 Environment="TRILIUM_DATA_DIR=/root/.note/trilium"
 ExecStart=/opt/node/app/trilium/trilium.sh
 WorkingDirectory=/opt/node/app/trilium
-Restart=on-failure
+#Restart=on-failure
 TimeoutSec=60s
 
 [Install]
