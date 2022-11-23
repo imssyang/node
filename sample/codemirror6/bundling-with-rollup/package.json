@@ -1,0 +1,22 @@
+{
+  "name": "codemirror6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "bundle": "rollup -c",
+    "start": "http-server -p 8000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "imssyang <imssyang@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@codemirror/lang-javascript": "^6.1.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "codemirror": "^6.0.1",
+    "http-server": "^14.1.1",
+    "rollup": "^3.4.0"
+  }
+}
