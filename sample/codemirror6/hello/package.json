@@ -13,7 +13,11 @@
   "author": "imssyang <imssyang@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@codemirror/lang-html": "^6.3.1",
     "@codemirror/lang-javascript": "^6.1.1",
+    "@codemirror/lang-python": "^6.1.0",
+    "@codemirror/language": "^6.3.1",
+    "@codemirror/state": "^6.1.4",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "codemirror": "^6.0.1",
     "http-server": "^14.1.1",

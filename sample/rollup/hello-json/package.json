@@ -1,0 +1,11 @@
+{
+  "name": "hello-json",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-json": "^5.0.2",
+    "rollup": "^3.5.0"
+  }
+}
