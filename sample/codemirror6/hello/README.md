@@ -8,7 +8,7 @@ npm init -y  初始化项目
 vi editor.js
 vi styles.css
 vi index.html
-npm i codemirror 
+npm i codemirror
 npm i @codemirror/state
 npm i @codemirror/language
 npm i @codemirror/lang-html

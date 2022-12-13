@@ -4,18 +4,14 @@ import {python} from "@codemirror/lang-python"
 
 let language = new Compartment, tabSize = new Compartment
 
-let state = EditorState.create({
+let view = new EditorView({
+  doc: 'print("hello")',
   extensions: [
     basicSetup,
     language.of(python()),
     tabSize.of(EditorState.tabSize.of(8))
-  ]
-})
-
-let view = new EditorView({
-  doc: 'print("hello")',
-  state,
-  parent: document.body
+  ],
+  parent: document.querySelector("#editor")
 })
 
 function setTabSize(view, size) {
@@ -23,4 +19,3 @@ function setTabSize(view, size) {
     effects: tabSize.reconfigure(EditorState.tabSize.of(size))
   })
 }
-
