@@ -1,0 +1,7 @@
+<div id="app"></div>
+<script type="module">
+(async () => {
+  const helloModule = await import("./hello.js");
+  document.querySelector("#app").innerHTML = helloModule.hello;
+})();
+</script>
