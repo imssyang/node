@@ -14,6 +14,8 @@ sample/**/*/package-lock.json
 sample/**/*/*.bundle.js
 sample/**/*/node_modules
 sample/**/*/out
+sample/codemirror6/dev/
+sample/codemirror6/tutorial/
 !sample/module/inputcheck/node_modules
 share
 yarn/cache/
