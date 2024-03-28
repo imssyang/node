@@ -22,7 +22,7 @@ export NODE_DISABLE_ENV=yes
 #export NPM_TOKEN=
 
 # NVM
-export NVM_DIR=${HOME}/.nvm
+export NVM_DIR=/opt/node/nvm
 export NVM_COLORS='cmgRY'
 if [[ -s "$NVM_DIR/nvm.sh" ]]; then
   source "$NVM_DIR/nvm.sh"
