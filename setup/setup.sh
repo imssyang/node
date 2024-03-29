@@ -97,7 +97,6 @@ init() {
   chmod 755 $HOME
 
   _enable_service hexo.service
-  _enable_service trilium.service
 }
 
 deinit() {
@@ -116,7 +115,6 @@ deinit() {
   _delete_symlink $HOME/share
 
   _disable_service hexo.service
-  _disable_service trilium.service
 }
 
 install() {
