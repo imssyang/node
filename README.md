@@ -59,6 +59,27 @@ asar pack app app.asar    打包
 npm install -g typescript
 ```
 
+### Trilium
+
+```bash
+# 修复sqlite3依赖GLIBC_2.29
+#apt-get install sqlite3 libsqlite3-dev
+#npm install --unsafe-perm -g --build-from-source --sqlite=/usr/bin sqlite3 --verbose
+
+# 修复node-gyp-build: Permission denied (root用户安装)
+#npm config set user 0
+#npm install -g node-gyp node-pre-gyp
+#npm install --unsafe-perm --verbose
+
+# Install from https://github.com/zadam/trilium/wiki/Manual-server-installation (v16.x.x)
+apt install libpng16-16 libpng-dev pkg-config autoconf libtool build-essential nasm libx11-dev libxkbfile-dev
+nvm use v16.13.2
+git clone https://github.com/zadam/trilium.git
+npm install --verbose
+npm rebuild
+npm run webpack
+```
+
 ### AsyncMode
 
 - waterfall `所有函数按照顺序被依次调用执行，所有的处理结果以数组形式传递给最后一个回调函数（也叫series或者sequence）。`
