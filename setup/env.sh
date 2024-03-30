@@ -1,6 +1,12 @@
 #!/bin/bash
 
-export NODE_DISABLE_ENV=yes
+# NVM
+export NVM_DIR=/opt/node/nvm
+export NVM_COLORS='cmgRY'
+if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+  source "$NVM_DIR/nvm.sh"
+fi
+
 #export NODE_DEBUG=fs,http
 #export NODE_DEBUG_NATIVE=
 #export NODE_DISABLE_COLORS=1
@@ -20,13 +26,6 @@ export NODE_DISABLE_ENV=yes
 # NPM
 #export NPM_CONFIG_PREFIX=~/.npm-global
 #export NPM_TOKEN=
-
-# NVM
-export NVM_DIR=/opt/node/nvm
-export NVM_COLORS='cmgRY'
-if [[ -s "$NVM_DIR/nvm.sh" ]]; then
-  source "$NVM_DIR/nvm.sh"
-fi
 
 # Express
 #export PORT=3030
